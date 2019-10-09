@@ -152,7 +152,7 @@ int kill_yuno(const char *directory, const char *pidfile, int verbose)
 BOOL find_yuno_pid_cb(
     void *user_data,
     wd_found_type type,     // type found
-    const char *fullpath,   // directory+filename found
+    char *fullpath,         // directory+filename found
     const char *directory,  // directory of found filename
     char *name,             // dname[255]
     int level,              // level of tree where file found
