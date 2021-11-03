@@ -22,7 +22,7 @@
 #define NAME        "yshutdown"
 #define DOC         "Shutdown all Yuneta processes, including the agent"
 
-#define APP_VERSION     "4.22.0"
+#define APP_VERSION     "4.22.1"
 #define APP_DATETIME    __DATE__ " " __TIME__
 #define APP_SUPPORT     "<niyamaka at yuneta.io>"
 
