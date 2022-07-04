@@ -66,8 +66,8 @@ static char args_doc[] = "";
 static struct argp_option options[] = {
 /*-name-------------key-----arg---------flags---doc-----------------group */
 {"verbose",         'l',    0,          0,      "Verbose mode."},
-{"no-kill-agent",   'n',    0,          0,      " Don't kill Yuneta agent."},
-{"no-kill-system",  's',    0,          0,      " Don't kill system's yunos (id < 1000)."},
+{"no-kill-agent",   'n',    0,          0,      "Don't kill Yuneta agent."},
+{"no-kill-system",  's',    0,          0,      "Don't kill system's yunos (logcenter, emailsender)."},
 {0}
 };
 
@@ -102,7 +102,7 @@ static error_t parse_opt (int key, char *arg, struct argp_state *state)
         no_kill_system = 1;
         break;
 
-        case 'l':
+    case 'l':
         arguments->verbose = 1;
         break;
 
@@ -170,7 +170,9 @@ BOOL find_yuno_pid_cb(
 {
     int verbose = (int)(size_t)user_data;
     if(no_kill_system) {
-        if (strcmp(name, "logcenter")==0 || strcmp(name, "emailsender")==0) {
+        if (strstr(fullpath, "logcenter")!=0 ||
+            strstr(fullpath, "emailsender")!=0
+        ) {
             return TRUE;
         }
     }
