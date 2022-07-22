@@ -9,9 +9,6 @@
 #include <stdio.h>
 #include <argp.h>
 #include <errno.h>
-#include <regex.h>
-#include <stdint.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <yuneta.h>
