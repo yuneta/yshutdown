@@ -167,8 +167,7 @@ BOOL find_yuno_pid_cb(
 {
     int verbose = (int)(size_t)user_data;
     if(no_kill_system) {
-        if (strstr(fullpath, "logcenter")!=0 ||
-            strstr(fullpath, "emailsender")!=0
+        if (strstr(fullpath, "logcenter")!=0
         ) {
             return TRUE;
         }
