@@ -64,7 +64,7 @@ static struct argp_option options[] = {
 /*-name-------------key-----arg---------flags---doc-----------------group */
 {"verbose",         'l',    0,          0,      "Verbose mode."},
 {"no-kill-agent",   'n',    0,          0,      "Don't kill Yuneta agent."},
-{"no-kill-system",  's',    0,          0,      "Don't kill system's yunos (logcenter, emailsender)."},
+{"no-kill-system",  's',    0,          0,      "Don't kill system's yunos (logcenter)."},
 {0}
 };
 
