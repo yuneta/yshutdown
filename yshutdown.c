@@ -188,6 +188,7 @@ int shutdown_yuneta(int no_kill_agent, int verbose)
     );
     if(!no_kill_agent) {
         kill_yuno("/yuneta/agent", "/yuneta/realms/agent/yuneta_agent.pid", verbose);
+        system("killall -9 yuneta_agent"); // Sometime agent is not killed
     }
     return 0;
 }
