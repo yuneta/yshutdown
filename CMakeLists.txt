@@ -1,8 +1,8 @@
 ##############################################
 #   CMake
 ##############################################
-project(yshutdown C)
 cmake_minimum_required(VERSION 3.0)
+project(yshutdown C)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 
